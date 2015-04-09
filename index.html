@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ColorBlendJs</title>
+    <style>
+    body {
+        background: #eee;
+    }
+
+    .demo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vmin;
+        margin-top: -33.33vmin;
+        margin-left: -50vmin;
+    }
+
+    button {
+        font-size: 1em;
+        bottom: 0;
+        padding: .618em 1.618em;
+        line-height: 1;
+        background: #3F51B5;
+        color: #fff;
+        border:0;
+        border-radius:2px;
+    }
+
+
+    .circle {
+        width: 66.66vmin;
+        height: 66.66vmin;
+        border-radius: 100%;
+        background: #fff;
+        position: absolute;
+        overflow: hidden;
+        transition: background .3s;
+    }
+
+    #circle1 {
+        left: 0;
+        background: rgb(160, 179, 197);
+    }
+
+    #circle2 {
+        box-shadow: rgba(0, 0, 0, .1) 0 1px 0, rgba(0, 0, 0, .3) 0 2px 16px;
+        background: rgb(44, 44, 44);
+        right: 0;
+    }
+
+    #circle3 {
+        background: rgb(98, 129, 159);
+        right: 33.34vmin;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="circle1" class="circle"></div>
+        <div id="circle2" class="circle">
+            <div id="circle3" class="circle"></div>
+        </div>
+    </div>
+    <button onClick='javascript:randomize()'>RANDOM COLORS</button>
+    <a href="https://github.com/javierbyte/colorblendjs"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <script src='index.js'></script>
+    <script>
+    function randomize() {
+        var circle1 = document.getElementById('circle1');
+        var circle2 = document.getElementById('circle2');
+        var circle3 = document.getElementById('circle3');
+
+        var firstColor = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
+        var secondColor = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
+        var resultColor = colorBlend.overlay(firstColor, secondColor);
+
+        circle1.style.background = 'rgb(' + firstColor.join(',') + ')';
+        circle2.style.background = 'rgb(' + secondColor.join(',') + ')';
+        circle3.style.background = 'rgb(' + resultColor.join(',') + ')';
+    }
+    </script>
+</body>
+
+</html>

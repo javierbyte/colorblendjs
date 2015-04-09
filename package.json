@@ -1,0 +1,26 @@
+{
+  "name": "colorblendjs",
+  "version": "0.0.1",
+  "description": "Color blends for javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javierbyte/colorblendjs"
+  },
+  "keywords": [
+    "color",
+    "blend",
+    "javascript",
+    "colors",
+    "colorblend"
+  ],
+  "author": "Javier Bórquez <hola@javierbyte.com> (http://javierbyte.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierbyte/colorblendjs/issues"
+  },
+  "homepage": "https://github.com/javierbyte/colorblendjs"
+}
