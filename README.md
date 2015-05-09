@@ -2,7 +2,7 @@
 
 Javascript utility for blending colors.
 
-[Live demo](http://javierbyte.github.io/react-blur/)
+[Live demo](http://javierbyte.github.io/colorblendjs/)
 
 [![colorblendjs](screenshot.jpg)](http://javierbyte.github.io/colorblendjs/)
 
