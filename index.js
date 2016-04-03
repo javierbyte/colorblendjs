@@ -6,7 +6,7 @@
 
   var colorBlend = {
     overlay: function (a, b, intensity) {
-      intensity = intensity || 1
+      intensity = typeof intensity === 'Undefined' ? 1 : intensity
       return a.reduce(function (result, current, index) {
         var value = (a[index] < 128) ? (2 * b[index] * a[index] / 255) : (255 - 2 * (255 - a[index]) * (255 - b[index]) / 255)
         value = (value * intensity + (a[index] * (1 - intensity)))
