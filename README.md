@@ -19,7 +19,8 @@ Require the file:
 Use it!
 
     // currently a color must be a `rgb` array like [160, 179, 197];
-    var resultColor = colorBlend.overlay(firstColor, secondColor);
+    // intensity goes from 0 to 1
+    var resultColor = colorBlend.overlay(firstColor, secondColor, intensity);
 
 
 
