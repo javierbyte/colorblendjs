@@ -5,11 +5,11 @@
   }
 
   var colorBlend = {
-    overlay: function (a, b, intesity) {
+    overlay: function (a, b, intensity) {
       intensity = intensity || 1
       return a.reduce(function (result, current, index) {
         var value = (a[index] < 128) ? (2 * b[index] * a[index] / 255) : (255 - 2 * (255 - a[index]) * (255 - b[index]) / 255)
-        value = (value * intesity + (a[index] * (1 - intesity)))
+        value = (value * intensity + (a[index] * (1 - intensity)))
 
         return result.concat(sanitizeRGB(value))
       }, [])
