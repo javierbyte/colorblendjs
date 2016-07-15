@@ -1,6 +1,6 @@
 {
   "name": "colorblendjs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Color blends for javascript.",
   "main": "index.js",
   "scripts": {
