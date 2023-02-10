@@ -8,7 +8,7 @@ Javascript utility for blending colors.
 
 ## Installation
 
-    npm install colorblendjs --save
+    yarn install colorblendjs --save
 
 ## Usage
 
